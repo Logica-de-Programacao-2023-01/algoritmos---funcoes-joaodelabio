@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	string := "pau flamejante"
+	fmt.Printf("A string \"%s\" possui %d vogais.\n", string, contarVogais(string))
+}
+func contarVogais(s string) int {
+	vogais := "aeiouAEIOU"
+	count := 0
+	for _, c := range s {
+		if strings.ContainsRune(vogais, c) {
+			count++
+		}
+	}
+	return count
+}

@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+	ss := []string{"macaco", "mico", "meu"}
+	fmt.Printf("a concatenaçao das strings \"%v\" é \"%s\".\n", ss, concatenarStrings(ss))
+}
+func concatenarStrings(slice []string) string {
+	var resultado string
+	for _, s := range slice {
+		resultado += s
+	}
+	return resultado
+}
